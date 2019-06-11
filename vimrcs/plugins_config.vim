@@ -81,7 +81,7 @@ let g:NERDTreeWinSize = 30
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pyc,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
-
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-multiple-cursors
@@ -184,6 +184,7 @@ let g:ale_set_highlights = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let g:gitgutter_enabled=0
 let g:gitgutter_highlight_lines=0
 let g:gitgutter_signs=0
@@ -195,9 +196,11 @@ let g:gitgutter_sign_modified         = '>'
 let g:gitgutter_sign_removed          = '-'
 let g:gitgutter_sign_modified_removed = '->'
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => fugitive
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 if exists("*fugitive#statusline")
   set statusline+=%{fugitive#statusline()}
 endif
@@ -211,10 +214,12 @@ noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => tagbar
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <F4> :TagbarToggle<CR>　
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => nerdtree-git-plugin
@@ -233,3 +238,7 @@ let g:NERDTreeIndicatorMapCustom = {
     \ }
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UndoTree
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F5> :UndotreeToggle<cr>
