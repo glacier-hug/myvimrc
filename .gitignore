@@ -1,0 +1,9 @@
+temp_dirs/undodir/*
+bundles/ack.vim/.netrwhist
+temp_dirs/yankring_history_v2.txt
+bundles/yankring/doc/tags
+bundles/tlib/doc/tags
+bundles/ctrlp.vim/doc/tags*
+__pycache__/*
+tags
+.DS_Store
