@@ -242,3 +242,10 @@ let g:NERDTreeIndicatorMapCustom = {
 " => UndoTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F5> :UndotreeToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => easymotion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader><leader>l <Plug>(easymotion-lineforward)
+map <Leader><leader>h <Plug>(easymotion-linebackward)
