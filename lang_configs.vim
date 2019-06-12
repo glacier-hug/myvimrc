@@ -13,20 +13,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => jedi-vim
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:jedi#rename_command = '<leader>jr'
-let g:jedi#usages_command = '<leader>ju'
-let g:jedi#goto_command = '<leader>jd'
-let g:jedi#goto_assignments_command = '<leader>ja'
-let g:jedi_motion = 1
-let g:jedi#popup_on_dot = 0
-let g:jedi#auto_initialization  = 0
-let g:jedi#show_call_signatures = 1
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => autopep8
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python noremap <buffer> <F7> :call Autopep8()<CR>
@@ -61,16 +47,8 @@ let g:go_highlight_types = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => YoucompleteMe
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use Jedi Signature feature without other features
-let g:jedi#auto_vim_configuration = 0
-let g:jedi#popup_on_dot = 0
-let g:jedi#popup_select_first = 0
-let g:jedi#completions_enabled = 0
-let g:jedi#completions_command = ""
-let g:jedi#show_call_signatures = "1"
-
 " Keymapping and some other congiuration
-let g:ycm_python_binary_path = 'python3'
+let g:ycm_python_binary_path = 'python2'
 let g:ycm_key_invoke_completion = '<c-x><c-o>'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
@@ -90,7 +68,7 @@ nnoremap <leader>jt :YcmCompleter GetType<CR>
 nnoremap K :YcmCompleter GetDoc<CR> 
 nnoremap <leader>jf :YcmCompleter FixIt<CR> 
 nnoremap <leader>jr :YcmCompleter RefactorRename
-
+let g:python_motion = 1
 "python with virtualenv support
 py << EOF
 import os
