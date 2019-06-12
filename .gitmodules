@@ -1,0 +1,3 @@
+[submodule "python_bundles/YouCompleteMe"]
+	path = python_bundles/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
