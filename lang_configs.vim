@@ -48,7 +48,7 @@ let g:go_highlight_types = 1
 " => YoucompleteMe
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Keymapping and some other congiuration
-let g:ycm_python_binary_path = 'python2'
+let g:ycm_python_binary_path = 'python3'
 let g:ycm_key_invoke_completion = '<c-x><c-o>'
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0

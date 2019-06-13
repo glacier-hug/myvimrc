@@ -247,3 +247,18 @@ nnoremap <F5> :UndotreeToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader><leader>l <Plug>(easymotion-lineforward)
 map <Leader><leader>h <Plug>(easymotion-linebackward)
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-misc vim-session
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:session_directory = "~/.vim_runtime/temp_dirs/session""
+let g:session_autoload = "no"
+let g:session_autosave = "no"
+let g:session_command_aliases = 1
+nnoremap <leader>so :OpenSession<Space>
+nnoremap <leader>ss :SaveSession<Space>
+nnoremap <leader>sd :DeleteSession<CR>
+nnoremap <leader>sc :CloseSession<CR>
+
