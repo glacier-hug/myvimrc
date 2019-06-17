@@ -4,7 +4,7 @@ temp_dirs/yankring_history_v2.txt
 bundles/yankring/doc/tags
 bundles/tlib/doc/tags
 bundles/ctrlp.vim/doc/tags*
-__pycache__/*
+__pycache__/**
 *.pyc
 tags
 .DS_Store
