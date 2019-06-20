@@ -165,7 +165,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['autopep8', 'isort', 'add_blank_lines_for_python_control_statements'],
+\   'python': ['yapf', 'isort', 'add_blank_lines_for_python_control_statements'],
 \   'go' : ['gofmt', 'goimports']
 \}
 
@@ -276,6 +276,7 @@ nmap <leader>fgs :GFile?<CR>
 nmap <leader>fa :Ag<CR>
 nmap <leader>fm :Marks<CR>
 nmap <leader>fl :Lines<CR>
+nmap <leader>fbl :BLines<CR>
 nmap <leader>fs :Snippets<CR>
 
 " Mapping selecting mappings

@@ -14,7 +14,6 @@ au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
 
-
 """"""""""""""""""""""""""""""
 " => Shell section
 """"""""""""""""""""""""""""""

@@ -13,12 +13,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => autopep8
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python noremap <buffer> <F7> :call Autopep8()<CR>
-let g:autopep8_aggressive=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => superTab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:SuperTabDefaultCompletionType = "context"
@@ -56,12 +50,11 @@ let g:ycm_collect_identifiers_from_tag_files = 1
 let g:ycm_complete_in_comments=1
 let g:ycm_key_list_select_completion=['<c-n>', '<tab>']
 let g:ycm_key_list_previous_completion=['<c-p>', '<S-tab>']
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-set completeopt=preview,longest,menu
-let g:ycm_cache_omnifunc=0
+let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_complete_in_strings = 1
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR> 
+let g:ycm_cache_omnifunc=0
+nnoremap <leader>jd :YcmCompleter GoTo<CR> 
 nnoremap <leader>ja :YcmCompleter GoToDeclaration<CR> 
 nnoremap <leader>ju :YcmCompleter GoToReferences<CR> 
 nnoremap <leader>jt :YcmCompleter GetType<CR> 
@@ -69,6 +62,7 @@ nnoremap K :YcmCompleter GetDoc<CR>
 nnoremap <leader>jf :YcmCompleter FixIt<CR> 
 nnoremap <leader>jr :YcmCompleter RefactorRename
 let g:python_motion = 1
+
 "python with virtualenv support
 py << EOF
 import os
