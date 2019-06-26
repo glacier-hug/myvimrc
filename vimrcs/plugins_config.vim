@@ -158,7 +158,7 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['yapf', 'isort', 'add_blank_lines_for_python_control_statements'],
+\   'python': ['yapf', 'black', 'isort', 'add_blank_lines_for_python_control_statements'],
 \   'go' : ['gofmt', 'goimports']
 \}
 
@@ -182,6 +182,10 @@ let g:gitgutter_signs=0
 noremap <silent> <leader>d :GitGutterToggle<cr>:GitGutterSignsToggle<CR>:GitGutterLineHighlightsToggle<CR>
 nmap <leader>hh <Plug>GitGutterPreviewHunk
 nnoremap <leader>hf :GitGutterFold<cr>
+nnoremap <leader>hj :GitGutterNextHunk<cr>
+nnoremap <leader>hk :GitGutterPrevHunk<cr>
+nnoremap <leader>hs :GitGutterStageHunk<cr>
+nnoremap <leader>hu :GitGutterUndoHunk<cr>
 let g:gitgutter_sign_added            = '+'
 let g:gitgutter_sign_modified         = '>'
 let g:gitgutter_sign_removed          = '-'
