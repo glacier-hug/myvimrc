@@ -36,9 +36,9 @@ map <leader>fu :MRU<CR>
 " => YankStack
 """"""""""""""""""""""""""""""
 let g:yankstack_yank_keys = ['y', 'd']
-
-nmap <c-p> <Plug>yankstack_substitute_older_paste
-nmap <c-n> <Plug>yankstack_substitute_newer_paste
+" let g:yankstack_map_keys = 0
+nmap <leader>p <Plug>yankstack_substitute_older_paste
+nmap <leader>P <Plug>yankstack_substitute_newer_paste
 
 
 """"""""""""""""""""""""""""""
@@ -46,7 +46,7 @@ nmap <c-n> <Plug>yankstack_substitute_newer_paste
 """"""""""""""""""""""""""""""
 let g:ctrlp_working_path_mode = 0
 
-let g:ctrlp_map = '<leader>f'
+let g:ctrlp_map = '<c-p>'
 map <c-b> :CtrlPBuffer<cr>
 
 let g:ctrlp_max_height = 20
@@ -82,17 +82,17 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.pycq,*.db,*.sqlite
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-multiple-cursors
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" => vim-multiple-cursors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_use_default_mapping=0
 
-" Default mapping
-let g:multi_cursor_start_word_key      = '<C-f>'
-let g:multi_cursor_select_all_word_key = '<C-a>'
-let g:multi_cursor_start_key           = 'g<C-f>'
-let g:multi_cursor_select_all_key      = 'g<C-a>'
-let g:multi_cursor_next_key            = '<C-f>'
+"" Default mapping
+let g:multi_cursor_start_word_key      = '<C-n>'
+let g:multi_cursor_select_all_word_key = '<C-c>'
+let g:multi_cursor_start_key           = 'g<C-n>'
+let g:multi_cursor_select_all_key      = 'g<C-c>'
+let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
@@ -144,11 +144,12 @@ let g:ale_linters = {
 
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['yapf', 'black', 'isort', 'add_blank_lines_for_python_control_statements'],
+\   'python': ['black', 'isort', 'add_blank_lines_for_python_control_statements'],
 \   'go' : ['gofmt', 'goimports']
 \}
 
 nmap <silent> <leader>a <Plug>(ale_next_wrap)
+nmap <silent> <leader>A <Plug>(ale_previous_wrap)
 nmap <F8> <Plug>(ale_fix)
 
 " Disabling highlighting
