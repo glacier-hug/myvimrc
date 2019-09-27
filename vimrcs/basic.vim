@@ -32,6 +32,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set to show number line
 set number
+set spell
 
 " forbit the arrowkey
 noremap <Up> <Nop>

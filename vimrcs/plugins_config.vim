@@ -89,9 +89,9 @@ let g:multi_cursor_use_default_mapping=0
 
 "" Default mapping
 let g:multi_cursor_start_word_key      = '<C-n>'
-let g:multi_cursor_select_all_word_key = '<C-c>'
+let g:multi_cursor_select_all_word_key = '<S-n>'
 let g:multi_cursor_start_key           = 'g<C-n>'
-let g:multi_cursor_select_all_key      = 'g<C-c>'
+let g:multi_cursor_select_all_key      = 'g<S-n>'
 let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
@@ -148,8 +148,8 @@ let g:ale_fixers = {
 \   'go' : ['gofmt', 'goimports']
 \}
 
-nmap <silent> <leader>a <Plug>(ale_next_wrap)
-nmap <silent> <leader>A <Plug>(ale_previous_wrap)
+nmap <silent> ]a <Plug>(ale_next_wrap)
+nmap <silent> [a <Plug>(ale_previous_wrap)
 nmap <F8> <Plug>(ale_fix)
 
 " Disabling highlighting
@@ -195,6 +195,8 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gb :Gblame<CR>
 noremap <Leader>gd :Gvdiff<CR>
 noremap <Leader>gr :Gremove<CR>
+noremap <Leader>gr :Gread<CR>
+noremap <Leader>gf :Gfetch<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
